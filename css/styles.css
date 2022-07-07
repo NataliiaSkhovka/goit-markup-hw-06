@@ -6,7 +6,7 @@
   --accent-color: #2196f3;
   --main-text-color: #757575;
   --secondary-text-color: #212121;
-  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: var(--main-font);
@@ -108,7 +108,7 @@ img {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .header-link {
   position: relative;
@@ -125,7 +125,7 @@ img {
   bottom: 0;
   animation-fill-mode: forwards;
   transform: scaleX(1);
-  transition: transform var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 .header-contact {
   margin-left: auto;
@@ -191,7 +191,7 @@ img {
   letter-spacing: 0.06em;
   border: none;
   border-radius: 4px;
-  transition: color var(--timing-function), backgroud-color var(--timing-function);
+  transition: color 250ms  var(--timing-function), backgroud-color 250ms var(--timing-function);
 }
 .main-btn:hover,
 .main-btn:focus {
@@ -329,7 +329,7 @@ img {
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
-  transition: color var(--timing-function), background-color var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 .social-icon {
   fill: currentColor;
@@ -361,7 +361,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
-  transition: color var(--timing-function), border var(--timing-function);
+  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 .clients-icon {
   fill: currentColor;
@@ -388,8 +388,8 @@ img {
   background-color: #f5f4fa;
   border: none;
   cursor: pointer;
-  transition: color var(--timing-function), background-color var(--timing-function),
-    box-shadow var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 .btn-port:hover,
 .btn-port:focus {
@@ -423,7 +423,7 @@ img {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 
 .img-port-text {
@@ -440,7 +440,7 @@ img {
   left: 50%;
 
   transform: translate(-50%, -50%);
-  transition: transform var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 .port-cards-link:hover .img-port-overlay {
   transform: translateY(0);
@@ -464,8 +464,9 @@ img {
 }
 .port-cards-link {
   display: block;
-  transition:box-shadow 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition:box-shadow 120ms var(--timing-function);
 }
 .port-cards-link:hover,
 .port-cards-link:focus {
@@ -516,7 +517,7 @@ img {
 .foot-cont {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  transition: color var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .foot-cont:hover,
 .foot-cont:focus {
@@ -559,7 +560,7 @@ img {
   border-radius: 50%;
   color: var(--primery-white-color);
   background-color: rgba(255, 255, 255, 0.1);
-  transition: color var(--timing-function), background-color var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 .footer-social-link:not(:last-child) {
   margin-right: 10px;
@@ -627,7 +628,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   visibility: visible;
-  transition: opasity var(--timing-function), visibility var(--timing-function);
+  transition: opasity 250ms var(--timing-function), visibility 250ms var(--timing-function);
   
 }
 .backdrop.is-hidden {
@@ -651,7 +652,7 @@ img {
   border-radius: 4px;
   opacity: 1;
   transform: scale(1) translate(-50%, -50%);
-  transition: transform var(--timing-function), opasity var(--timing-function);
+  transition: transform 250ms var(--timing-function), opasity 250ms var(--timing-function);
 }
 .close-button {
   position: absolute;
@@ -665,7 +666,7 @@ img {
   cursor: pointer;
   fill: #000000;
   background-color: rgba(255, 255, 255, 1);
-  transition: fill var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 .icon-close {
   position: absolute;
@@ -676,5 +677,164 @@ img {
 .close-button:focus,
 .close-button:hover {
  fill: var(--accent-color);
+}
+.modal-form{
+  padding: 40px; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.modal-title{
+  margin-bottom: 16px;
+  margin-top: 0;
+
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+.modal-form-list {
+  display: flex;
+   flex-direction: column;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 20px;
+   margin-top: 0;
+   padding: 0;
+   width: 100%;
+}
+.modal-form-item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+.modal-form-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.modal-form-label{
+  margin-bottom: 4px;
+   font-size: 12px;
+   line-height: 1.16;
+   letter-spacing: 0.01em;
+   color:var(--primary-text-color)
+}
+.modal-form-input{
+  height: 40px;
+   margin: 0;
+   padding: 0;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+   border-radius: 4px;
+   padding-left: 35px;
+
+   cursor: pointer;
+}
+.modal-form-input:focus,
+.modal-form-item textarea:focus{
+   outline: none;
+   border: 1px solid var(--accent-color);
+}
+.modal-icon{
+  position: absolute;
+  top:50%;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+
+  transition: fill 250ms var(--timing-function)
+}
+
+.modal-form-input:focus + .modal-icon{
+  fill: var(--accent-color);
+}
+.modal-form-item textarea::placeholder{
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea{
+  resize: none;
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-policy{
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  margin-right: 7px;
+
+  border: 2px solid var(--title-text-color) ;
+  border-radius: 4px;
+}
+
+.checkbox:checked + .icon-policy{
+  background-color: var(--accent-color);
+  background-image: url('../images/form/icon-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+  background-repeat: no-repeat;
+}
+
+.label{
+  display:flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+
+.policy-link{
+  display: inline;
+  color: var(--accent-color);
+  margin-left: 3px;
+}
+.primary-button.submit{
+  padding: 10px 55px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.primary-button{
   
+  min-width: 200px;
+  min-height: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+ 
+  color: var(--primery-white-color);
+background-color: var(--accent-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+transition: color 250ms  var(--timing-function), backgroud-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+
 }
