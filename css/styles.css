@@ -782,7 +782,7 @@ textarea{
   overflow: hidden;
 }
 
-.icon-policy{
+.icon-checkbox{
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -793,9 +793,9 @@ textarea{
   border-radius: 4px;
 }
 
-.checkbox:checked + .icon-policy{
+.checkbox:checked + .icon-checkbox{
   background-color: var(--accent-color);
-  background-image: url('../images/form/icon-check.svg');
+  background-image: url('../images/icons/icon-check.svg');
   background-size: contain;
   background-origin: border-box;
   border-color: var(--accent-color);
