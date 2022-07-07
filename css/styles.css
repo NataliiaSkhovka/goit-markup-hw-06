@@ -613,7 +613,7 @@ img {
    line-height: 1.88;
    letter-spacing: 0.06em;
 }
-.icon-telegram{
+.icon-send{
   margin-left: 10px;
   fill:currentColor ;
 }
@@ -674,6 +674,7 @@ img {
   transform: translate(-50%, -50%);
 }
 .close-button:focus,
-.close-button:hover{
-  fill: var(--accent-color);
+.close-button:hover {
+ fill: var(--accent-color);
+  
 }
